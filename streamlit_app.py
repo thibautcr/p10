@@ -4,6 +4,6 @@ import requests as re
 import json
 import matplotlib.pyplot as plt
 
-st.set_page_config(page_title="App détection billet")
+st.set_page_config(page_title="test tc")
 
-st.title("Application de détection des faux billets")
+st.title("test tc")
