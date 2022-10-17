@@ -22,6 +22,7 @@ st.header("Read me")
 st.markdown("""<style>.streamlit-expanderHeader{font-size: 17px;}</style>
 <div style="text-align: justify;">Cette application Streamlit, développée dans le cadre du projet 10 de la formation Data Analyst v2 d'OpenClassrooms, utilise un modèle d'apprentissage supervisé de classification (Régression logistique) servant d'API afin de détecter les billets frauduleux en fonction de leurs dimensions.</div>""", unsafe_allow_html=True)
 st.write("""explication structure dataset""")
+st.write("""Le notebook du modèle, les scripts FastAPI, Streamlit et Dockerfiles sont disponibles sur [GitHub](https://).""")
 
 # 2. Dépot de fichier
 st.header("Drop a file section")
@@ -100,3 +101,5 @@ if st.button("Execute"):
 st.header("Entrainement du modèle")
 st.write("""méthodologie utlisée : pistes explorées, entrainement, optimisation, ..., résultats ,""")
 
+
+st.markdown("""<div style="text-align: right;">Thibaut Cressent</div>""")
