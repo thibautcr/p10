@@ -17,19 +17,23 @@ modelTraining = st.container()
 with header: 
 	st.title('Détection de faux billets')
 
-	
+# 1. Readm me	
 st.header("Read me")
 st.markdown("""<style>.streamlit-expanderHeader{font-size: 17px;}</style>
 <div style="text-align: justify;">Cette application Streamlit, développée dans le cadre du projet 10 de la formation Data Analyst v2 d'OpenClassrooms, utilise un modèle d'apprentissage supervisé de classification (Régression logistique) servant d'API afin de détecter les billets frauduleux en fonction de leurs dimensions.</div>""", unsafe_allow_html=True)
 st.write("""explication structure dataset""")
 
+# 2. Dépot de fichier
 st.header("Drop a file section")
 file = st.file_uploader("Dans un premier temps, vous devez déposer votre fichier au format .csv")
 
 option = st.radio("Quel type de billet souhaitez-vous visualiser ?", ("Tous les billets", "Uniquement les faux"), 1)
 
-
-st.header("Analyse du fichier")
+# 3. Analyse du fichier
+st.header("Analyse des billets")
+st.write("""En cliquant sur le bouton ci-dessous, notre algorithme de prédiction viendra analyser les fichiers 
+- d'une part, en respectant les parametres optimaux que nous lui calculé
+- d'autre part, en réutilisant les valeurs observées dans son entrainement préalable sur les 1200 billets du jeu d'entrainement""")
 if st.button("Execute"):
     try:
         file = pd.read_csv(file, sep=",", decimal=".")
