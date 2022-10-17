@@ -17,7 +17,7 @@ modelTraining = st.container()
 with header: 
 	st.title('Détection de faux billets')
 
-# 1. Readm me	
+# 1. Read me	
 st.header("Read me")
 st.markdown("""<style>.streamlit-expanderHeader{font-size: 17px;}</style>
 <div style="text-align: justify;">Cette application Streamlit, développée dans le cadre du projet 10 de la formation Data Analyst v2 d'OpenClassrooms, utilise un modèle d'apprentissage supervisé de classification (Régression logistique) servant d'API afin de détecter les billets frauduleux en fonction de leurs dimensions.</div>""", unsafe_allow_html=True)
@@ -31,9 +31,9 @@ option = st.radio("Quel type de billet souhaitez-vous visualiser ?", ("Tous les 
 
 # 3. Analyse du fichier
 st.header("Analyse des billets")
-st.write("""En cliquant sur le bouton ci-dessous, notre algorithme de prédiction viendra analyser les fichiers 
-- d'une part, en respectant les parametres optimaux que nous lui calculé
-- d'autre part, en réutilisant les valeurs observées dans son entrainement préalable sur les 1200 billets du jeu d'entrainement""")
+st.write("""En cliquant sur le bouton "Execute" ci-dessous, notre algorithme de prédiction viendra analyser les billets contenu dans le fichier :
+1. d'une part, en respectant les parametres optimaux que nous lui calculé
+2. d'autre part, en réutilisant les valeurs observées dans son entrainement préalable sur les 1200 billets du jeu d'entrainement""")
 if st.button("Execute"):
     try:
         file = pd.read_csv(file, sep=",", decimal=".")
@@ -56,7 +56,7 @@ if st.button("Execute"):
         
         #Traitement de la réponse
         data = pd.DataFrame(resp["0"].values(), index=resp["0"].keys(), columns=["Proba"])
-        data["Prediction"] = data["Proba"]>=0.62
+        data["Prediction"] = data["Probabilité de vrai billet"]>=0.62
 
         #Création d'un pie chart
         l = data["Prediction"].value_counts().index.tolist() #Transformation des index en liste 
@@ -94,4 +94,9 @@ if st.button("Execute"):
             else:
                 col2.write(data)
             col2.download_button(label = "Télécharger", data= down2, file_name='Billets.csv', help="fichier csv encodé en *utf-8*")
+	
+	
+# 4. Entrainement du modèle
+st.header("Entrainement du modèle")
+st.write("""méthodologie utlisée : pistes explorées, entrainement, optimisation, ..., résultats ,""")
 
