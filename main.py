@@ -29,8 +29,8 @@ file = st.file_uploader("Dans un premier temps, vous devez déposer votre fichie
 option = st.radio("Quel type de billet souhaitez-vous visualiser ?", ("Tous les billets", "Uniquement les faux"), 1)
 
 
-
-if st.button("Analyses"):
+st.header("Analyse du fichier")
+if st.button("Execute"):
     try:
         file = pd.read_csv(file, sep=",", decimal=".")
         if file.shape[1] != 7:
