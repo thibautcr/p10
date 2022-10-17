@@ -5,10 +5,10 @@ import streamlit as st
 # import matplotlib.pyplot as plt
 
 
-header = st.beta_container()
-data_set = st.beta_container()
-features = st.beta_container()
-modelTraining = st.beta_container()
+header = st.container()
+data_set = st.container()
+features = st.container()
+modelTraining = st.container()
 
 
 with header: 
