@@ -10,6 +10,9 @@ data_set = st.container()
 features = st.container()
 modelTraining = st.container()
 
+st.set_page_config(page_title="App détection billet")
+
+st.title("Application de détection des faux billets")
 
 with header: 
 	st.title('application web détection')
