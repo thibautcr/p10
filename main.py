@@ -22,4 +22,6 @@ st.markdown("""<style>.streamlit-expanderHeader{font-size: 17px;}</style>
 st.write("""Vous pouvez:  
 - Rentrer manuellement les dimensions d'un billet dans la bar sur le côté.  
 - Charger un fichier *csv* qui devra être encodé en utf-8. Le fichier doit ressembler à cela et les colonnes doivent correspondre :""")
-df = pd.read_csv("billets_production.csv")
+
+file = st.file_uploader("Déposer votre fichier:")
+
