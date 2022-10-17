@@ -102,4 +102,4 @@ st.header("Entrainement du modèle")
 st.write("""méthodologie utlisée : pistes explorées, entrainement, optimisation, ..., résultats ,""")
 
 
-st.markdown("""<div style="text-align: right;">Thibaut Cressent</div>""")
+st.markdown("""Thibaut Cressent""")
