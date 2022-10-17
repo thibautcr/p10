@@ -23,5 +23,7 @@ st.write("""Vous pouvez:
 - Rentrer manuellement les dimensions d'un billet dans la bar sur le côté.  
 - Charger un fichier *csv* qui devra être encodé en utf-8. Le fichier doit ressembler à cela et les colonnes doivent correspondre :""")
 
-file = st.file_uploader("Déposer votre fichier:")
+file = st.file_uploader("Dans un premier temps, vous devez déposer votre fichier au format .csv")
+
+option = st.radio("Quel type de billet souhaitez-vous visualiser ?", ("Tous les billets", "Uniquement les faux"), 1)
 
