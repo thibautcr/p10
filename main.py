@@ -16,7 +16,9 @@ modelTraining = st.container()
 
 with header: 
 	st.title('Détection de faux billets')
+
 	
+st.header("Read me")
 st.markdown("""<style>.streamlit-expanderHeader{font-size: 17px;}</style>
 <div style="text-align: justify;">Cette application Streamlit, développée dans le cadre du projet 10 de la formation Data Analyst v2 d'OpenClassrooms, utilise un modèle d'apprentissage supervisé de classification (Régression logistique) servant d'API afin de détecter les billets frauduleux en fonction de leurs dimensions.</div>""", unsafe_allow_html=True)
 st.write("""explication structure dataset""")
