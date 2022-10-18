@@ -49,7 +49,6 @@ if st.button("Execute"):
         st.write('Vérifiez que votre fichier est un fichier *csv* encodé en utf-8 avec comme séparateur décimal un "." et comme séparateur de valeurs une ",".')
     except ValueError:
         st.write("Veuillez sélectionner un fichier existant.")
-    else:
 	
 	
 # 4. Entrainement du modèle
