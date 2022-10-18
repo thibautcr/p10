@@ -53,7 +53,7 @@ if st.button("Execute"):
 	
 	
 # 4. Entrainement du modèle
-st.header("Entrainement du modèle")
+st.header("""Entrainement du modèle""")
 st.write("""méthodologie utlisée : pistes explorées, entrainement, optimisation, ..., résultats ,""")
 
 
