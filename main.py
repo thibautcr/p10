@@ -50,51 +50,6 @@ if st.button("Execute"):
     except ValueError:
         st.write("Veuillez sélectionner un fichier existant.")
     else:
-        values = file.to_dict()
-        res = re.post(f"https://app-detection-billet.herokuapp.com/multipredict",json=values)
-        json_str = json.dumps(res.json())
-        resp = json.loads(json_str)
-        
-        #Traitement de la réponse
-        data = pd.DataFrame(resp["0"].values(), index=resp["0"].keys(), columns=["Proba"])
-        data["Prediction"] = data["Probabilité de vrai billet"]>=0.62
-
-        #Création d'un pie chart
-        l = data["Prediction"].value_counts().index.tolist() #Transformation des index en liste 
-        l = list(map(lambda x: str(x).replace("False", 'Faux billets').replace("True", 'Vrais billets'), l)) #Remplacement des booléens par Vrai/Faux
-        def generateur(): #Création d'un générateur pour l'argument autopct de Matplotlib
-            for i in range(2):
-                yield l[i]
-                
-        gen = generateur() #initialisation du générateur
-        fig, ax = plt.subplots()
-        ax.pie(data["Prediction"].value_counts(), autopct= lambda p: f'{p:.2f}%\n {p*data.shape[0]/100:.0f} {next(gen)}', labels=l) #On utilise next(gen) pour itérer sur le générateur et ainsi le nombre de billet est labellisé avec Vrais/Faux
-        
-        data.index.name = "Id"
-        down = pd.DataFrame(data.loc[data["Prediction"] == False].index).to_csv(header=False, index=False).encode('utf-8')
-        down2 = data.to_csv().encode('utf-8')
-        
-        
-        
-        #Divison en 2 parties:
-        col1, col2  = st.columns(2)
-        
-        col1.pyplot(fig)
-        
-        
-        if option == "Uniquement les faux":
-            if len(data.loc[data["Prediction"]==False]) > 5:
-                col2.expander("Liste des identifiants des faux billets:").write(data.loc[data["Prediction"]==False])
-            else:
-                col2.write(data.loc[data["Prediction"]==False])
-            col2.download_button(label = "Télécharger l'id des faux billets", data= down, file_name='Faux_billets.csv', help="fichier csv encodé en *utf-8*")
-            
-        elif option == "Tous les billets":
-            if len(data) >5:
-                col2.expander("Liste des identifiants des billets:").write(data)
-            else:
-                col2.write(data)
-            col2.download_button(label = "Télécharger", data= down2, file_name='Billets.csv', help="fichier csv encodé en *utf-8*")
 	
 	
 # 4. Entrainement du modèle
