@@ -1,7 +1,6 @@
 import streamlit as st
 import pandas as pd
 import pickle
-# import sklearn
 
 st.title("Application de détection")
 
@@ -30,10 +29,10 @@ st.sidebar.write("[Exemple du format de table](https://share.streamlit.io/mesmit
 # scaler = open("scaler.pkl",'rb')
 # estimator = pickle.loads(estimator.read())
 # st.dataframe(pd.read_csv("billets_production.csv"))
+estimator = pickle.load(open('estimator.pkl','rb'))
 
-
-pickle_estimator = open("estimator.pkl", "rb")
-estimator = pickle.load(pickle_estimator)
+# pickle_estimator = open("estimator.pkl", "rb")
+# estimator = pickle.load(pickle_estimator)
 
 # if file is not None:
 # 	df = pd.read_csv(file, sep=",", decimal=".").reset_index()
