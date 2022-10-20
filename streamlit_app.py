@@ -13,9 +13,7 @@ st.sidebar.header("2. Upload des fichiers pickle")
 estimator = st.sidebar.file_uploader("estimator")
 scaler = st.sidebar.file_uploader("scaler")
 
-
-st.write("df")
-df = pd.read_csv(df)
+df = pd.read_csv(df, sep=",", decimal=".")
 st.dataframe(df)
 
 
