@@ -21,5 +21,5 @@ scaler = st.sidebar.file_uploader("scaler")
 estimator = open("estimator.pkl",'rb')
 scaler = open("scaler.pkl",'rb')
 
-st.write(estimator)
-st.write(scaler)
+st.write(type(estimator))
+st.write(type(scaler))
