@@ -45,13 +45,19 @@ option = st.radio("Quel type de billet souhaitez-vous visualiser ?", ("Tous les 
 # estimator = open("estimator.pkl",'rb')
 # scaler = open("scaler.pkl",'rb')
 
+estimator = st.file_uploader("Estimator")
+print(estimator)
+# scaler = st.file_uploader("Scaler")
+# estimator = open("estimator.pkl",'rb')
+# scaler = open("scaler.pkl",'rb')
+
 # estimator = pd.read_pickle(open("estimator.pkl",'rb'))
 # scaler = pd.read_pickle(open("scaler.pkl",'rb'))
 
 # estimator = pd.read_pickle(estimator) 
 # scaler = pd.read_pickle(scaler) 
 
-estimator = with open("estimator.pkl", 'rb')
+# estimator = with open("estimator.pkl", 'rb')
 
 st.header("Analyse des billets")
 st.write("""En cliquant sur le bouton "Execute" ci-dessous, notre algorithme de prédiction viendra analyser les billets contenu dans le fichier :
@@ -63,16 +69,16 @@ st.write("""En cliquant sur le bouton "Execute" ci-dessous, notre algorithme de 
 
 # st.write(type(scaler)) 
 # st.write(scaler)
-# if st.button("Execute"):
-# 	data_test = pd.read_csv(file, sep=",", decimal=".").reset_index()
-# 	data_index = file.id
-# 	data_test = scaler.transform(file.loc[:,file.columns != "id"])
-# 	y_pred = estimator.predict(data_test)
-# 	y_prob = pd.DataFrame(estimator.predict_proba(data_test).round(4))
-# 	results = pd.DataFrame(index = data_index)
-# 	results["Prédiction RegLog"] = y_pred
-# 	results["Probabilité d'un vrai billet"] = y_prob[1].values
-# 	st.dataframe(data=results)
+if st.button("Execute"):
+	data_test = pd.read_csv(file, sep=",", decimal=".").reset_index()
+	data_index = file.id
+	data_test = scaler.transform(file.loc[:,file.columns != "id"])
+	y_pred = estimator.predict(data_test)
+	y_prob = pd.DataFrame(estimator.predict_proba(data_test).round(4))
+	results = pd.DataFrame(index = data_index)
+	results["Prédiction RegLog"] = y_pred
+	results["Probabilité d'un vrai billet"] = y_prob[1].values
+	st.dataframe(data=results)
 	
 	
 
