@@ -31,11 +31,11 @@ option = st.radio("Quel type de billet souhaitez-vous visualiser ?", ("Tous les 
 
 # 3. Analyse du fichier
 
-url_estimator = "https://github.com/thibautcr/p10/blob/06e4a1a72aa488f7c1b9aa407c5b8393946025e2/estimator.pkl?raw=true"
-url_scaler =  "https://github.com/thibautcr/p10/blob/06e4a1a72aa488f7c1b9aa407c5b8393946025e2/scaler.pkl?raw=true"
+# url_estimator = "https://github.com/thibautcr/p10/blob/06e4a1a72aa488f7c1b9aa407c5b8393946025e2/estimator.pkl?raw=true"
+# url_scaler =  "https://github.com/thibautcr/p10/blob/06e4a1a72aa488f7c1b9aa407c5b8393946025e2/scaler.pkl?raw=true"
 
-estimator = pd.read_pickle(url_estimator) 
-scaler = pd.read_pickle(url_scaler) 
+# estimator = pd.read_pickle(url_estimator) 
+# scaler = pd.read_pickle(url_scaler) 
 
 st.header("Analyse des billets")
 st.write("""En cliquant sur le bouton "Execute" ci-dessous, notre algorithme de prédiction viendra analyser les billets contenu dans le fichier :
