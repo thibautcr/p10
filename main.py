@@ -47,7 +47,7 @@ option = st.radio("Quel type de billet souhaitez-vous visualiser ?", ("Tous les 
 
 estimator = st.file_uploader("Estimator")
 print(estimator)
-# scaler = st.file_uploader("Scaler")
+scaler = st.file_uploader("Scaler")
 # estimator = open("estimator.pkl",'rb')
 # scaler = open("scaler.pkl",'rb')
 
