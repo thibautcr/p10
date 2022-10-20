@@ -16,6 +16,14 @@ st.sidebar.header("2. Upload des fichiers pickle")
 estimator = st.sidebar.file_uploader("estimator")
 scaler = st.sidebar.file_uploader("scaler")
 
+scaler = pickle.loads(scaler.read())
+st.write("Model loaded")
+st.write(scaler)
+# st.write("Predicting...")
+# st.write(clf2.predict(X[0:1]))
+# st.write(y[0])
+# st.write("Done!")
+
 st.download_button("Download Model",data=pickle.dumps(scaler),file_name="scaler.pkl")
 
 # MAIN
