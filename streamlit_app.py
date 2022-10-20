@@ -23,4 +23,5 @@ if file != None:
 	df_index = df.id
 	if scaler != None:
 		data_test = scaler.transform(df.loc[:,df.columns != "id"])
-		st.write(data_test)
+		st.write(scaler)
+		# st.write(data_test)
