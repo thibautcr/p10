@@ -16,8 +16,6 @@ st.sidebar.subheader("2. Upload des fichiers pickle")
 estimator = st.sidebar.file_uploader("estimator")
 scaler = st.sidebar.file_uploader("scaler")
 
-# df = pd.read_csv(file, sep=",", decimal=".").reset_index()
-# st.dataframe(df)
 
-estimator = pickle.load(open('estimator.pkl', 'rb'))
-scaler = pickle.load(open('scaler.pkl', 'rb'))
+# estimator = pickle.load(open('estimator.pkl', 'rb'))
+# scaler = pickle.load(open('scaler.pkl', 'rb'))
