@@ -21,7 +21,7 @@ estimator = st.sidebar.file_uploader("estimator")
 # 	scaler = pickle.loads(scaler.read())
 
 # MAIN
-st.dataframe("billets_production.csv")
+st.dataframe(pd.read_csv("billets_production.csv"))
 # if file is not None:
 # 	df = pd.read_csv(file, sep=",", decimal=".").reset_index()
 # 	df_index = df.id
