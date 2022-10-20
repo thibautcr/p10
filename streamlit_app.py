@@ -16,7 +16,7 @@ st.sidebar.header("2. Upload des fichiers pickle")
 estimator = st.sidebar.file_uploader("estimator")
 scaler = st.sidebar.file_uploader("scaler")
 
-st.download_button("Download Model",data=pickle.dumps(scaler),file_name="scaler.pkl",
+st.download_button("Download Model",data=pickle.dumps(scaler),file_name="scaler.pkl")
 
 # MAIN
 if file != None:
