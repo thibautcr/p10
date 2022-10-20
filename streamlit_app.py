@@ -18,8 +18,8 @@ scaler = st.sidebar.file_uploader("scaler")
 # df = pd.read_csv(file, sep=",", decimal=".").reset_index()
 # st.dataframe(df)
 
-estimator = open("estimator.pkl",'rb')
-scaler = open("scaler.pkl",'rb')
+estimator = pickle.load(open('estimator.pkl', 'rb'))
+scaler = pickle.load(open('scaler.pkl', 'rb'))
 
 st.write(type(estimator))
 st.write(type(scaler))
