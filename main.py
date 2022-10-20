@@ -36,8 +36,11 @@ option = st.radio("Quel type de billet souhaitez-vous visualiser ?", ("Tous les 
 # estimator = pd.read_pickle(url_estimator) 
 # scaler = pd.read_pickle(url_scaler) 
 
-estimator = st.pd.read_pickle('estimator.pkl')
-scaler = st.pd.read_pickle('scaler.pkl')
+# estimator = st.pd.read_pickle('estimator.pkl')
+# scaler = st.pd.read_pickle('scaler.pkl')
+
+estimator = open("estimator.pkl",'rb')
+scaler = open("scaler.pkl",'rb')
 
 st.header("Analyse des billets")
 st.write("""En cliquant sur le bouton "Execute" ci-dessous, notre algorithme de prédiction viendra analyser les billets contenu dans le fichier :
