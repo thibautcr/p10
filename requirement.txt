@@ -3,3 +3,4 @@ streamlit==1.8.1
 requests==2.27.1
 protobuf==3.20.*
 matplotlib==3.5.1
+pickle
