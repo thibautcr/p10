@@ -1,4 +1,5 @@
 import streamlit as st
+import pandas as pd
 
 st.title("Application de détection")
 
@@ -14,9 +15,9 @@ st.sidebar.header("2. Upload des fichiers pickle")
 estimator = st.sidebar.file_uploader("estimator")
 scaler = st.sidebar.file_uploader("scaler")
 
-# df = pd.read_csv(file, sep=",", decimal=".").reset_index()
-# st.dataframe(df)
+df = pd.read_csv(file, sep=",", decimal=".").reset_index()
+st.dataframe(df)
 
 
-df_git = pd.read_csv("billets_production.csv")
-st.dataframe(df_git)
+# df_git = pd.read_csv("billets_production.csv")
+# st.dataframe(df_git)
