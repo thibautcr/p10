@@ -54,7 +54,7 @@ if st.button("Execute"):
 	y_prob = pd.DataFrame(estimator.predict_proba(data_test).round(4))
 	results = pd.DataFrame(index = data_index)
 	results["Prédiction RegLog"] = y_pred
-	results["Probabilité d'un vrai billet"] = y_prob[1]
+	results["Probabilité d'un vrai billet"] = y_prob[1].values
 	st.dataframe(data=results)
 	
 	
