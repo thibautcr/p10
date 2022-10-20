@@ -46,16 +46,18 @@ st.header("Analyse des billets")
 st.write("""En cliquant sur le bouton "Execute" ci-dessous, notre algorithme de prédiction viendra analyser les billets contenu dans le fichier :
 1. d'une part, en respectant les parametres optimaux que nous lui calculé
 2. d'autre part, en réutilisant les valeurs observées dans son entrainement préalable sur les 1200 billets du jeu d'entrainement""")
-if st.button("Execute"):
-	data_test = pd.read_csv(file, sep=",", decimal=".").reset_index()
-	data_index = file.id
-	data_test = scaler.transform(file.loc[:,file.columns != "id"])
-	y_pred = estimator.predict(data_test)
-	y_prob = pd.DataFrame(estimator.predict_proba(data_test).round(4))
-	results = pd.DataFrame(index = data_index)
-	results["Prédiction RegLog"] = y_pred
-	results["Probabilité d'un vrai billet"] = y_prob[1].values
-	st.dataframe(data=results)
+st.write(type(estimator)
+st.write(type(scaler)	 
+# if st.button("Execute"):
+# 	data_test = pd.read_csv(file, sep=",", decimal=".").reset_index()
+# 	data_index = file.id
+# 	data_test = scaler.transform(file.loc[:,file.columns != "id"])
+# 	y_pred = estimator.predict(data_test)
+# 	y_prob = pd.DataFrame(estimator.predict_proba(data_test).round(4))
+# 	results = pd.DataFrame(index = data_index)
+# 	results["Prédiction RegLog"] = y_pred
+# 	results["Probabilité d'un vrai billet"] = y_prob[1].values
+# 	st.dataframe(data=results)
 	
 	
 
