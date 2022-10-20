@@ -14,7 +14,7 @@ estimator = st.sidebar.file_uploader("estimator")
 scaler = st.sidebar.file_uploader("scaler")
 
 df = pd.read_csv(df, sep=",", decimal=".")
-st.dataframe(df)
+# st.dataframe(df)
 
 
 # df_git = pd.read_csv("billets_production.csv")
