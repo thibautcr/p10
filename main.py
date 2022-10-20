@@ -4,17 +4,16 @@ import pickle
 import matplotlib.pyplot as plt
 
 
-header = st.container()
-data_set = st.container()
-features = st.container()
-modelTraining = st.container()
+# header = st.container()
+# data_set = st.container()
+# features = st.container()
+# modelTraining = st.container()
 
 # st.set_page_config(page_title="App détection billet")
 
 # st.title("Application de détection des faux billets")
 
-with header: 
-	st.title('Détection de faux billets')
+st.title('Détection de faux billets')
 
 # 1. Read me	
 st.header("Read me")
@@ -51,11 +50,12 @@ st.header("Analyse des billets")
 st.write("""En cliquant sur le bouton "Execute" ci-dessous, notre algorithme de prédiction viendra analyser les billets contenu dans le fichier :
 1. d'une part, en respectant les parametres optimaux que nous lui calculé
 2. d'autre part, en réutilisant les valeurs observées dans son entrainement préalable sur les 1200 billets du jeu d'entrainement""")
-st.write(type(estimator))
-st.write(estimator)
 
-st.write(type(scaler)) 
-st.write(scaler)
+# st.write(type(estimator))
+# st.write(estimator)
+
+# st.write(type(scaler)) 
+# st.write(scaler)
 # if st.button("Execute"):
 # 	data_test = pd.read_csv(file, sep=",", decimal=".").reset_index()
 # 	data_index = file.id
