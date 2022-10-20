@@ -15,7 +15,8 @@ st.sidebar.write("[Exemple du format de table](https://share.streamlit.io/mesmit
 st.sidebar.header("2. Upload des fichiers pickle")
 estimator = st.sidebar.file_uploader("estimator")
 scaler = st.sidebar.file_uploader("scaler")
-scaler = pd.read_pickle(scaler)
+
+st.download_button("Download Model",data=pickle.dumps(scaler),file_name="scaler.pkl",
 
 # MAIN
 if file != None:
