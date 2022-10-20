@@ -19,3 +19,7 @@ scaler = st.sidebar.file_uploader("scaler")
 # MAIN
 if file != None:
 	df = pd.read_csv(file, sep=",", decimal=".").reset_index()
+	df_index = df.id
+	if scaler != None:
+		data_test = scaler.transform(df.loc[:,df.columns != "id"])
+		st.write(data_test)
