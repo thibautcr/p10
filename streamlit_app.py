@@ -15,9 +15,10 @@ st.sidebar.write("[Exemple du format de table](https://share.streamlit.io/mesmit
 st.sidebar.header("2. Upload des fichiers pickle")
 estimator_pkl = st.sidebar.file_uploader("estimator")
 scaler_pkl = st.sidebar.file_uploader("scaler")
-
 if estimator_pkl is not None:
 	estimator = pickle.loads(estimator_pkl.read())
+if scaler_pkl is not None:
+	scaler = pickle.loads(scaler_pkl.read())
 
 # MAIN
 if file is not None:
