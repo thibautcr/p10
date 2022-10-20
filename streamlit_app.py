@@ -23,11 +23,17 @@ st.sidebar.write("[Exemple du format de table](https://share.streamlit.io/mesmit
 
 
 # MAIN
-estimator = open("estimator.pkl",'rb')
-estimator = pickle.loads(estimator.read())
-scaler = open("scaler.pkl",'rb')
-estimator = pickle.loads(estimator.read())
-st.dataframe(pd.read_csv("billets_production.csv"))
+
+
+# estimator = open("estimator.pkl",'rb')
+# estimator = pickle.loads(estimator.read())
+# scaler = open("scaler.pkl",'rb')
+# estimator = pickle.loads(estimator.read())
+# st.dataframe(pd.read_csv("billets_production.csv"))
+
+
+pickle_estimator = open("estimator.pkl", "rb")
+estimator = pickle.load(pickle_estimator)
 
 # if file is not None:
 # 	df = pd.read_csv(file, sep=",", decimal=".").reset_index()
