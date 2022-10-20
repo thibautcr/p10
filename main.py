@@ -45,8 +45,8 @@ option = st.radio("Quel type de billet souhaitez-vous visualiser ?", ("Tous les 
 # estimator = open("estimator.pkl",'rb')
 # scaler = open("scaler.pkl",'rb')
 
-estimator = pd.read_pickle(open("estimator.pkl",'rb'))
-scaler = pd.read_pickle(open("scaler.pkl",'rb'))
+# estimator = pd.read_pickle(open("estimator.pkl",'rb'))
+# scaler = pd.read_pickle(open("scaler.pkl",'rb'))
 
 # estimator = pd.read_pickle(estimator) 
 # scaler = pd.read_pickle(scaler) 
