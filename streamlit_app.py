@@ -2,7 +2,7 @@ import streamlit as st
 
 st.title("Application de détection")
 
-page = st.siderbar.write('Drop a file section')
+st.sidebar.write('Drop a file section')
 
 # st.sidebar.header("1. Upload le fichier CSV")
 # df = st.sidebar.file_uploader("Dans un premier temps, vous devez déposer votre fichier au format .csv")
