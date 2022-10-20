@@ -14,19 +14,20 @@ st.sidebar.write("[Exemple du format de table](https://share.streamlit.io/mesmit
 
 st.sidebar.header("2. Upload des fichiers pickle")
 estimator = st.sidebar.file_uploader("estimator")
-scaler = st.sidebar.file_uploader("scaler")
-if estimator is not None:
-	estimator = pickle.loads(estimator.read())
-if scaler is not None:
-	scaler = pickle.loads(scaler.read())
+# scaler = st.sidebar.file_uploader("scaler")
+# if estimator is not None:
+# 	estimator = pickle.loads(estimator.read())
+# if scaler is not None:
+# 	scaler = pickle.loads(scaler.read())
 
 # MAIN
-if file is not None:
-	df = pd.read_csv(file, sep=",", decimal=".").reset_index()
-	df_index = df.id
-	st.write("Fichier chargé!")
-	if scaler is not None:
-		# data_test = scaler.transform(df.loc[:,df.columns != "id"])
-		st.write("Model loaded")
-		st.write(scaler)
-		# st.write(data_test)
+st.dataframe("billets_production.csv")
+# if file is not None:
+# 	df = pd.read_csv(file, sep=",", decimal=".").reset_index()
+# 	df_index = df.id
+# 	st.write("Fichier chargé!")
+# 	if scaler is not None:
+# 		# data_test = scaler.transform(df.loc[:,df.columns != "id"])
+# 		st.write("Model loaded")
+# 		st.write(scaler)
+# 		# st.write(data_test)
