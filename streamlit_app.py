@@ -15,4 +15,4 @@ scaler = st.sidebar.file_uploader("scaler")
 
 
 st.write("df")
-print(df.head())
+st.write(df.head())
