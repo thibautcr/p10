@@ -19,7 +19,7 @@ with header:
 # 1. Read me	
 st.header("Read me")
 st.markdown("""<style>.streamlit-expanderHeader{font-size: 17px;}</style>
-<div style="text-align: justify;">Cette application Streamlit, développée dans le cadre du projet 10 de la formation Data Analyst v2 d'OpenClassrooms, utilise un modèle d'apprentissage supervisé de classification (Régression logistique) servant d'API afin de détecter les billets frauduleux en fonction de leurs dimensions.</div>""", unsafe_allow_html=True)
+<div style="text-align: justify;">intro.</div>""", unsafe_allow_html=True)
 st.write("""explication structure dataset""")
 st.write("""Le notebook du modèle, les scripts FastAPI, Streamlit et Dockerfiles sont disponibles sur [GitHub](https://).""")
 
@@ -60,6 +60,9 @@ if st.button("Execute"):
         st.write('Vérifiez que votre fichier est un fichier *csv* encodé en utf-8 avec comme séparateur décimal un "." et comme séparateur de valeurs une ",".')
     except ValueError:
         st.write("Veuillez sélectionner un fichier existant.")
+	
+#     else :
+	
 	
 	
 # 4. Entrainement du modèle
