@@ -17,7 +17,7 @@ estimator = st.sidebar.file_uploader("estimator")
 scaler = st.sidebar.file_uploader("scaler")
 if estimator is not None:
 	estimator = pickle.loads(estimator.read())
-if scaler_pkl is not None:
+if scaler is not None:
 	scaler = pickle.loads(scaler.read())
 
 # MAIN
