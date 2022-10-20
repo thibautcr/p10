@@ -15,8 +15,9 @@ scaler = st.sidebar.file_uploader("scaler")
 
 
 st.write("df")
+df = pd.read_csv(df)
 st.dataframe(df)
 
 
-df_git = pd.read_csv("billets_production.csv")
-st.dataframe(df_git)
+# df_git = pd.read_csv("billets_production.csv")
+# st.dataframe(df_git)
