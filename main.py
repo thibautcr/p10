@@ -55,6 +55,7 @@ if st.button("Execute"):
 	results = pd.DataFrame(index = data_index)
 	results["Prédiction RegLog"] = y_pred
 	results["Probabilité d'un vrai billet"] = y_prob[1]
+	st.dataframe(data=results)
 	
 	
 
