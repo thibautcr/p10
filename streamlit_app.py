@@ -15,10 +15,10 @@ st.sidebar.write("[Exemple du format de table](https://share.streamlit.io/mesmit
 st.sidebar.header("2. Upload des fichiers pickle")
 estimator = st.sidebar.file_uploader("estimator")
 scaler = st.sidebar.file_uploader("scaler")
-
-scaler = pickle.loads(scaler.read())
-st.write("Model loaded")
-st.write(scaler)
+if scaler != None:
+	scaler = pickle.loads(scaler.read())
+	st.write("Model loaded")
+	st.write(scaler)
 # st.write("Predicting...")
 # st.write(clf2.predict(X[0:1]))
 # st.write(y[0])
@@ -32,5 +32,5 @@ if file != None:
 	df_index = df.id
 	if scaler != None:
 		# data_test = scaler.transform(df.loc[:,df.columns != "id"])
-		st.write(scaler)
+		# st.write(scaler)
 		# st.write(data_test)
