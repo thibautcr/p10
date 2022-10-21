@@ -31,7 +31,7 @@ Cependant, j'ai décidé d'héberger ces fichiers sur ma page github afin de fac
 
 Vous pouvez retrouver ma page [GitHub ici](https://github.com/thibautcr/projet-10.git).
 
-Par la suite, le second notebook “10.2 : applications” nécessite l’importation de fichier de certains éléments contenus dans le premier notebook. Ces éléments sont notre estimateur et notre scaler de notre régression logistique permettant la classification des billets. Une commande d'exportation est située à la fin du notebook "traitements".
+Par la suite, le second notebook “10.2 : applications” nécessite l’importation de certains fichiers contenus dans le premier notebook. Ces fichiers, au format pickle, sont notre estimateur et notre scaler de notre régression logistique permettant tous deux la classification des billets. Une commande d'exportation est située à la fin du notebook "traitements".
 
 Ces fichiers, au format pkl, sont également hébergés sur ma page GitHub et ne nécessitent donc aucune importation. Cet hébergement permet, à mon sens, de rendre l'application plus facile à prendre en main pour les utilisateurs, notamment non-programmeurs.
 
