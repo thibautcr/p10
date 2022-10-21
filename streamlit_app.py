@@ -29,7 +29,7 @@ st.sidebar.write("[Exemple du format de table](https://share.streamlit.io/mesmit
 # scaler = open("scaler.pkl",'rb')
 # estimator = pickle.loads(estimator.read())
 # st.dataframe(pd.read_csv("billets_production.csv"))
-estimator = pickle.load(open('estimator.pkl','rb'))
+estimator = pickle.load(open('pickle/estimator.pkl','rb'))
 
 # pickle_estimator = open("estimator.pkl", "rb")
 # estimator = pickle.load(pickle_estimator)
