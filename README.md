@@ -50,7 +50,7 @@ La méthodologie employée est développée en markdown de chaque début de part
 Le second notebook a, quant à lui, pour unique objectif de prédire l'authenticité des billets qu'on lui importe, à partir d'un algorithme de régression logistique déjà entrainé et optimisé.
 
 Je souhaiterai précisé qu'**une application Streamlit est en cours de développement**. Cependant, pour des **contraintes techniques et temporelles**, je n'ai pas encore trouver le moyen fonctionnel d'importer mes fichiers pickle dans l'application et je ne peux poursuivre ces travaux.
-J'espère **résoudre ce problème technique afin de présenter l'application** directement sur la plateforme Streamlit que je trouve plus intuitive et ergonomique qu'un jupyter notebook.
+J'espère **résoudre ce problème technique afin de présenter l'application** directement sur la plateforme Streamlit que je trouve plus intuitive et ergonomique qu'un jupyter notebook. Vous pouvez retrouver [l'application ici]([https://github.com/thibautcr/projet-10.git](https://thibautcr-p10-streamlit-app-76hsts.streamlitapp.com))
 
 Merci pour votre lecture!
 
