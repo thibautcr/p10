@@ -1,4 +1,3 @@
-Thibaut Cressent
 # README Projet 10
 
 ## 0. Scénario du projet
